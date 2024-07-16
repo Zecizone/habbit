@@ -11,9 +11,6 @@
     <title>Habbit - трекер привычек</title>
   </head>
   <body>
-    <!-- <div id="app"></div> -->
-    <!-- <script type="module" src="/main.js"></script> -->
-    <div class="wrapper">
       <div class="container">
       <header class="header">
           <div class="header__logo">
@@ -79,35 +76,36 @@
               </div>
           </div>
       </main>
-    </div>
-  </div>
-    <!-- разметка для всплывающего окна -->
-    <!-- <div class="modal-habbit">
-      <div class="modal">
-        <div class="modal__delite">
-          <img src="img/shape.svg" alt="">
-        </div>
-        <div class="modal__title">Новая привычка</div>
-        <div class="modal__icon">Иконка</div>
-        <div class="modal__progress"> 
-          <div class="modal__progress-step">
-            <img src="img/dumbbell.svg" alt="">
+      <div class="modal-wrapper modal-activ">
+      <div class="modal-habbit modal-activ">
+        <div class="modal">
+          <div class="modal__delite">
+            <img src="img/shape.svg" alt="">
           </div>
-          <div class="modal__progress-step modal__progress-step--filled">
-            <img src="img/water.svg" alt="">
+          <div class="modal__title">Новая привычка</div>
+          <div class="modal__icon">Иконка</div>
+          <div class="modal__progress"> 
+            <div class="modal__progress-step">
+              <img src="img/dumbbell.svg" alt="">
+            </div>
+            <div class="modal__progress-step modal__progress-step--filled">
+              <img src="img/water.svg" alt="">
+            </div>
+            <div class="modal__progress-step">
+              <img src="img/eat.svg" alt="">
+            </div>
           </div>
-          <div class="modal__progress-step">
-            <img src="img/eat.svg" alt="">
+          <div class="modal__label">
+            <input class="modal__input" type="text" value="Название">
+            <input class="modal__input" type="text" value="Цель">
           </div>
-        </div>
-        <div class="modal__label">
-          <input class="modal__input" type="text" value="Название">
-          <input class="modal__input" type="text" value="Цель">
-        </div>
-        <div class="modal__add">
-          Добавить
+          <div class="modal__add">
+            Добавить
+          </div>
         </div>
       </div>
-    </div> -->
+    </div>
+      <div class="overlay"></div>
+    </div> 
   </body>
 </html>

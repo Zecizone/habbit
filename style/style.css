@@ -38,14 +38,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-}
-
-.wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
+    overflow-x:hidden;
 }
 
 .container {
@@ -54,6 +47,7 @@ body {
     padding: 0 10px;
     display: flex;
     width: 100%;
+    position: relative;
 }
 
 .header {
@@ -243,14 +237,39 @@ body {
     border-radius: 9px;
 }
 
-/* стили для всплывающего окна */
 
-/* .modal-habbit {
+
+/* стили для всплывающего окна */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.modal-wrapper {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #0000004f;
+    z-index: 100;
+    visibility: hidden;
+}
+
+.modal-habbit {
     width: 425px; 
     height: 340px; 
     background: #ffffff; 
     box-shadow: 0px 8px 14px 12px rgba(56.31, 56.31, 56.31, 0.05); 
-    border-radius: 10px
+    border-radius: 10px;
+    position: absolute;
+    top: 25%;
+    left: 38%;
+    z-index:2;
+    visibility: hidden;
 }
 
 .modal__delite {
@@ -260,7 +279,6 @@ body {
     font-size: 24px;
     cursor: pointer;
     color: #5051F9;
-
     width: 24px; 
     height: 24px; 
 }
@@ -340,7 +358,14 @@ body {
     cursor: pointer;
     text-align: center;
     padding: 11px;
+}
+
+/* включить modal-activ чтобы увидеть модальное окно */
+
+/* .modal-activ {
+    visibility: visible;
 } */
+
 
 
   
