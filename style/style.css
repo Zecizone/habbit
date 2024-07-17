@@ -36,22 +36,14 @@ body {
     height: 100%;
     margin: 0;
     display: flex;
-    flex-direction: column;
     width: 100%;
     overflow-x:hidden;
+    background-color: #f3f6fd;
+    color: #090909;
 }
 
-.container {
-    flex: 1;
-    margin: 0 auto;
-    padding: 0 10px;
-    display: flex;
-    width: 100%;
-    position: relative;
-}
-
-.header {
-    min-width: 125px;
+.panel {
+    width: 125px;
     height: auto;
     background-color: #FBFAFF;
     color: #090909;
@@ -65,54 +57,71 @@ body {
     margin-bottom: 48px;
 }
 
-.header__nav {
-    display: block;
+.container {
+    flex: 1;
+    padding: 45px 35px; 
 }
 
-.main {
-    flex: 1;
-    min-width: 890px;
-    min-height: 475px;
-    background-color: #f3f6fd;
-    padding: 45px 35px;
+.nav {
     display: flex;
     flex-direction: column;
-    color: #090909;
+    align-items: center;
 }
 
-.nav__add--button {
+.nav__btn {
     width: 45px;
     height: 45px;
-    background: #ffffff;
+    background-color: #ffffff;
     border-radius: 14px;
     box-shadow: 0px 8px 14px rgba(61, 107, 224, 0.12);
     margin-bottom: 25px;
     cursor: pointer;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.nav__add--button:hover,
-.nav__add--button:active {
-    background: #5051f9;
+.nav__btn:hover {
+    background-color: #5051f9;
 }
 
-.nav__add--button > img {
-    text-align: center;
-    padding: 10px;
+.btn-dumbbel {
+    background-image: url(/img/dumbbell.svg);
 }
 
-.nav__add--button > img:hover,
-.nav__add--button > img:active {
-    filter: brightness(1000%) contrast(1000%);
+.btn-dumbbel:hover {
+    background-image: url(/img/dumbbell-white.svg);
 }
 
-.add {
+.btn-water {
+    background-image: url(/img/water.svg);
+}
+
+.btn-water:hover {
+    background-image: url(/img/water-white.svg);
+}
+
+.btn-eat {
+    background-image: url(/img/eat.svg);
+}
+
+.btn-eat:hover {
+    background-image: url(/img/eat-white.svg);
+}
+
+.btn-add {
+    background-image: url(/img/add.svg);
     width: 45px;
     height: 45px;
-    border: 1px solid #c9d4ff;
+    border: 1px solid #CAD5FF;
     border-radius: 14px;
 }
 
-.main__section {
+.btn-add:hover {
+    background-image: url(/img/add-white.svg);
+}
+
+.header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 36px;
@@ -134,14 +143,14 @@ body {
     color: #232360;
 }
 
-.progress__bar {
+.progress {
     border-radius: 4px;
     width: 235px;
     height: 5px;
     background-color: #e6e9ed;
 }
 
-.progress__bar--active {
+.progress__progress-line {
     border-radius: 4px;
     width: 171px;
     height: 5px;
@@ -154,20 +163,15 @@ body {
     color: #768396;
 }
 
-.main__comment {
+.main__otch {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-bottom: 12px;
     background-color: #fff;
     border-radius: 10px;
+    align-items: center;
 }
 
-.main__comment--row {
-    display: flex;
-}
-
-.comment__day {
+.otch__day {
     background-color: #FBFAFF;
     color: #090909; 
     font-size: 14px; 
@@ -176,30 +180,35 @@ body {
     padding: 19px 40px;
     border-right: 1px #E7EBFB solid;
     border-radius: 10px 0 0 10px;  
+    flex: inherit;
+    font-family: "Comfortaa", sans-serif;
 }
 
-.comment__info {
+.otch__text {
     color: #23235F; 
     font-size: 16px; 
     font-weight: 500; 
-    word-wrap: break-word;
-    padding: 19px 24px;
+    display: flex;
+    flex: auto;
+    margin: 5px;
 }
 
-.info__button {
-    padding-right: 15px;
-    cursor: pointer;
+.otch__text > p {
+    flex: auto;
+    margin-left: 20px;
 }
 
-.info__button > img:hover,
-.nav__add--button > img:active {
-    /* черный */
-    /* filter: invert(100%) brightness(0%); */
-    /* красный? */
-    filter: invert(20%) sepia(10000%) saturate(1000%) hue-rotate(-50deg) brightness(100%) contrast(1000%);
+.del__button {
+    background-image: url(/img/delete.svg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    flex: initial;
+    background-color: unset;
 }
 
-.comment__info--new {
+.comment {
     background: #fff; 
     border-radius: 9px; 
     border: 1px #E7EBFB solid;
@@ -212,20 +221,19 @@ body {
     display: flex;
     gap: 10px;
     align-items: center;
+    flex: auto;
+    margin-left: 20px;
+    width: 39px;
 }
 
-.comment__info--new > img {
-    width: 18px;
-    height: 18px;
-}
-
-.comment__info--new > input {
+.comment > input {
     color: #8899A8; 
     font-size: 14px; 
     font-weight: 400; 
+    font-family: "Comfortaa", sans-serif;
 }
 
-.info__button--new > button{
+.comment__btn {
     width: 120px; 
     height: 39px;
     padding: 14px 33px;
@@ -235,17 +243,12 @@ body {
     word-wrap: break-word;
     background: #EDECFE; 
     border-radius: 9px;
+    margin-right: 5px;
 }
 
 
 
 /* стили для всплывающего окна */
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
 
 .modal-wrapper {
     position: fixed;
@@ -259,7 +262,7 @@ body {
     visibility: hidden;
 }
 
-.modal-habbit {
+.modal-bacdrop {
     width: 425px; 
     height: 340px; 
     background: #ffffff; 
@@ -316,14 +319,15 @@ body {
     border: 1px #5051F9 solid;
     text-align: center;
     padding: 10px;
+    cursor: pointer;
+    background-color: #ffffff;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.modal__progress-step--filled {
-      background: #5051f9;
-}
-
-.modal__progress-step--filled > img {
-    filter: brightness(1000%) contrast(1000%);
+.modal__progress-step:hover {
+    background-color: #5051f9;
 }
 
 .modal__label {

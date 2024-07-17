@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="img/Logomark.svg" />
+    <link rel="icon" type="image/svg+xml" href="img/logoMark.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style/style.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,73 +11,55 @@
     <title>Habbit - трекер привычек</title>
   </head>
   <body>
+    <div class="panel">
+      <img src="img/logo.svg" alt="" class="header__logo">
+      <nav class="nav">
+        <button class="nav__btn btn-dumbbel"></button>
+        <button class="nav__btn btn-water"></button>
+        <button class="nav__btn btn-eat"></button>
+        <button class="nav__btn btn-add"></button>
+      </nav>
+    </div>
       <div class="container">
-      <header class="header">
-          <div class="header__logo">
-              <img src="img/Group 74.svg" alt="" class="logo__image">
-          </div>
-          <nav class="header__nav">
-            <div class="nav__menu"></div>
-            <div class="nav__menu--card"></div>
-            <div class="nav__add--button">
-              <img src="img/dumbbell.svg" alt="">
-            </div>
-            <div class="nav__add--button">
-              <img src="img/water.svg" alt="">
-            </div>
-            <div class="nav__add--button">
-              <img src="img/eat.svg" alt="">
-            </div>
-            <div class="nav__add--button add">
-              <img src="img/Add.svg" alt="">
-            </div>
-          </nav>
-      </header>
-      <main class="main">
-          <section class="main__section">
-              <div class="section__title--container">
-                  <h1 class="section__title">Отжимания</h1>
-              </div>
+          <header class="header">
+              <h1 class="section__title">Отжимания</h1>
               <div class="section__progress">
                   <div class="section__progress--txt">
                     <p class="progress__text">Прогресс</p>
                     <p class="progress__percentage">80%</p>
                   </div>
-                  <div class="progress__bar">
-                      <div class="progress__bar--active"></div>
+                  <div class="progress">
+                      <div class="progress__progress-line"></div>
                   </div>
               </div>
-          </section>
-          <div class="main__comment">
-            <div class="main__comment--row">
-              <div class="comment__day">
+          </header>
+          <main class="main">
+            <div class="main__otch">
+              <div class="otch__day">
                   День 1
               </div>
-              <div class="comment__info">
-                  Первый подход всегда даётся тяжело
+              <div class="otch__text">
+                 <p>Первый подход всегда даётся тяжело</p>
+                 <button class="del__button"></button>
               </div>
             </div>
-              <div class="info__button">
-                <img src="img/delete.svg" alt="">
+            
+            <div class="main__otch">
+            
+                <div class="otch__day">
+                    День 2
+                </div>
+                <div class="comment">
+                    <img src="img/komm.svg" alt="">
+                    <input type="text" placeholder="Комментарий">   
+                </div>
+                <button class="comment__btn" type="submit">Готово</button>
               </div>
+            </main>
           </div>
-          <div class="main__comment main__comment--new">
-            <div class="main__comment--row">
-              <div class="comment__day comment__day--new">
-                  День 2
-              </div>
-              <div class="comment__info--new">
-                  <img src="img/komm.svg" alt="">
-                  <input type="text" value="Комментарий">
-              </div>
-            </div>
-              <div class="info__button info__button--new">
-                  <button>Готово</button>
-              </div>
-          </div>
-      </main>
+        </div>
       <div class="modal-wrapper modal-activ">
-      <div class="modal-habbit modal-activ">
+      <div class="modal-bacdrop modal-activ">
         <div class="modal">
           <div class="modal__delite">
             <img src="img/shape.svg" alt="">
@@ -85,19 +67,13 @@
           <div class="modal__title">Новая привычка</div>
           <div class="modal__icon">Иконка</div>
           <div class="modal__progress"> 
-            <div class="modal__progress-step">
-              <img src="img/dumbbell.svg" alt="">
-            </div>
-            <div class="modal__progress-step modal__progress-step--filled">
-              <img src="img/water.svg" alt="">
-            </div>
-            <div class="modal__progress-step">
-              <img src="img/eat.svg" alt="">
-            </div>
+            <button class="modal__progress-step btn-dumbbel"></button>
+            <button class="modal__progress-step btn-water"></button>
+            <button class="modal__progress-step btn-eat"></button>
           </div>
           <div class="modal__label">
-            <input class="modal__input" type="text" value="Название">
-            <input class="modal__input" type="text" value="Цель">
+            <input class="modal__input" type="text" placeholder="Название">
+            <input class="modal__input" type="number" placeholder="Цель">
           </div>
           <div class="modal__add">
             Добавить
@@ -105,7 +81,5 @@
         </div>
       </div>
     </div>
-      <div class="overlay"></div>
-    </div> 
   </body>
 </html>
