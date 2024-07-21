@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="img/logoMark.svg" />
@@ -9,77 +9,84 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <title>Habbit - трекер привычек</title>
+    <script src="index.js"></script>
   </head>
   <body>
     <div class="panel">
       <img src="img/logo.svg" alt="" class="header__logo">
       <nav class="nav">
-        <button class="nav__btn btn-dumbbel"></button>
-        <button class="nav__btn btn-water"></button>
-        <button class="nav__btn btn-eat"></button>
-        <button class="nav__btn btn-add"></button>
+        <button id="navBtn1" class="nav__btn">
+          <img id="btnDumbbel" src="" alt="Гантеля" />
+        </button>
+        <button id="navBtn2" class="nav__btn">
+          <img id="btnWater" src="" alt="Вода" />
+        </button>
+        <button id="navBtn3" class="nav__btn">
+          <img id="btnEat" src="" alt="Еда" />
+        </button>
+        <button id="navBtn4" class="nav__btn btn-add">
+          <img id="btnAdd" src="" alt="Добавить" />
+        </button>
       </nav>
     </div>
       <div class="container">
           <header class="header">
-              <h1 class="section__title">Отжимания</h1>
-              <div class="section__progress">
-                  <div class="section__progress--txt">
+              <h1 class="header__title">Отжимания</h1>
+              <div class="progress">
+                  <div class="progress__title">
                     <p class="progress__text">Прогресс</p>
                     <p class="progress__percentage">80%</p>
                   </div>
-                  <div class="progress">
-                      <div class="progress__progress-line"></div>
+                  <div class="progress__line">
+                      <div class="progress__line--percentage"></div>
                   </div>
               </div>
           </header>
           <main class="main">
-            <div class="main__otch">
-              <div class="otch__day">
-                  День 1
-              </div>
-              <div class="otch__text">
-                 <p>Первый подход всегда даётся тяжело</p>
-                 <button class="del__button"></button>
-              </div>
-            </div>
-            
-            <div class="main__otch">
-            
-                <div class="otch__day">
+            <ul class="main__list">
+              <li class="main__item report">
+                <span class="report__day">День 1</span>
+                <span class="report__text">Первый подход всегда даётся тяжело</span>
+                <button class="report__del-button"></button>
+              </li>
+            </ul>
+            <div class="main__item report">
+                <div class="report__day">
                     День 2
                 </div>
-                <div class="comment">
-                    <img src="img/komm.svg" alt="">
-                    <input type="text" placeholder="Комментарий">   
+                <div class="report__comment comment">
+                    <img class="comment__img" src="img/komm.svg" alt="">
+                    <input class="comment__input" type="text" placeholder="Комментарий">   
                 </div>
                 <button class="comment__btn" type="submit">Готово</button>
               </div>
             </main>
           </div>
         </div>
-      <div class="modal-wrapper modal-activ">
-      <div class="modal-bacdrop modal-activ">
-        <div class="modal">
-          <div class="modal__delite">
-            <img src="img/shape.svg" alt="">
+        <dialog class="modal-bacdrop">
+          <div class="modal">
+            <button id="close" class="modal__delite">
+              <img src="img/shape.svg" alt="delite" />
+            </button>
+            <div class="modal__title">Новая привычка</div>
+            <div class="modal__icon">Иконка</div>
+            <div class="modal__progress"> 
+              <button id="navBtn5" class="modal__progress-step">
+                <img id="Dumbbel" src="" alt="Гантеля" />
+              </button>
+              <button id="navBtn6" class="modal__progress-step">
+                <img id="Water" src="" alt="Вода" />
+              </button>
+              <button id="navBtn7" class="modal__progress-step">
+                <img id="Eat" src="" alt="Еда" />
+              </button>
+            </div>
+              <form class="modal__form">
+                <input class="modal__form__input" type="text" placeholder="Название">
+                <input class="modal__form__input" type="number" placeholder="Цель">
+              </form>
+            <button class="modal__add">Добавить</button>
           </div>
-          <div class="modal__title">Новая привычка</div>
-          <div class="modal__icon">Иконка</div>
-          <div class="modal__progress"> 
-            <button class="modal__progress-step btn-dumbbel"></button>
-            <button class="modal__progress-step btn-water"></button>
-            <button class="modal__progress-step btn-eat"></button>
-          </div>
-          <div class="modal__label">
-            <input class="modal__input" type="text" placeholder="Название">
-            <input class="modal__input" type="number" placeholder="Цель">
-          </div>
-          <div class="modal__add">
-            Добавить
-          </div>
-        </div>
-      </div>
-    </div>
+        </dialog>
   </body>
 </html>

@@ -1,10 +1,4 @@
-:root {
-    font-family: "Comfortaa", sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-  }
-
-  *, *::before, *::after {
+*, *::before, *::after {
 	padding: 0;
 	margin: 0;
 	border: 0;
@@ -33,11 +27,12 @@ html {
 
 body {
     font-family: "Comfortaa", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
     height: 100%;
     margin: 0;
     display: flex;
     width: 100%;
-    overflow-x:hidden;
     background-color: #f3f6fd;
     color: #090909;
 }
@@ -81,44 +76,8 @@ body {
     background-position: center;
 }
 
-.nav__btn:hover {
-    background-color: #5051f9;
-}
-
-.btn-dumbbel {
-    background-image: url(/img/dumbbell.svg);
-}
-
-.btn-dumbbel:hover {
-    background-image: url(/img/dumbbell-white.svg);
-}
-
-.btn-water {
-    background-image: url(/img/water.svg);
-}
-
-.btn-water:hover {
-    background-image: url(/img/water-white.svg);
-}
-
-.btn-eat {
-    background-image: url(/img/eat.svg);
-}
-
-.btn-eat:hover {
-    background-image: url(/img/eat-white.svg);
-}
-
 .btn-add {
-    background-image: url(/img/add.svg);
-    width: 45px;
-    height: 45px;
     border: 1px solid #CAD5FF;
-    border-radius: 14px;
-}
-
-.btn-add:hover {
-    background-image: url(/img/add-white.svg);
 }
 
 .header {
@@ -127,30 +86,28 @@ body {
     margin-bottom: 36px;
 }
 
-.section__progress--txt {
-    display: flex;
-    justify-content: space-between;
-}
-
-.section__title {
-    font-weight: 400;
+.header__title {
     font-size: 30px;
 }
 
+.progress__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
 .progress__text {
-    font-weight: 400;
-    font-size: 14px;
     color: #232360;
 }
 
-.progress {
+.progress__line {
     border-radius: 4px;
     width: 235px;
     height: 5px;
     background-color: #e6e9ed;
 }
 
-.progress__progress-line {
+.progress__line--percentage {
     border-radius: 4px;
     width: 171px;
     height: 5px;
@@ -158,12 +115,11 @@ body {
 }
 
 .progress__percentage {
-    font-weight: 400;
     font-size: 12px;
     color: #768396;
 }
 
-.main__otch {
+.report {
     display: flex;
     margin-bottom: 12px;
     background-color: #fff;
@@ -171,34 +127,29 @@ body {
     align-items: center;
 }
 
-.otch__day {
+.report__day {
     background-color: #FBFAFF;
-    color: #090909; 
-    font-size: 14px; 
+    color: #090909;  
     font-weight: 500; 
     word-wrap: break-word;
-    padding: 19px 40px;
+    width: 130px;
+    text-align: center;
     border-right: 1px #E7EBFB solid;
     border-radius: 10px 0 0 10px;  
     flex: inherit;
-    font-family: "Comfortaa", sans-serif;
+    line-height: 53px;
 }
 
-.otch__text {
+.report__text {
     color: #23235F; 
     font-size: 16px; 
     font-weight: 500; 
     display: flex;
     flex: auto;
-    margin: 5px;
-}
-
-.otch__text > p {
-    flex: auto;
     margin-left: 20px;
 }
 
-.del__button {
+.report__del-button {
     background-image: url(/img/delete.svg);
     background-size: auto;
     background-repeat: no-repeat;
@@ -206,6 +157,8 @@ body {
     height: 24px;
     flex: initial;
     background-color: unset;
+    cursor: pointer;
+    margin-right: 5px;
 }
 
 .comment {
@@ -214,8 +167,6 @@ body {
     border: 1px #E7EBFB solid;
     margin: 5px;
     color: #8899A8; 
-    font-size: 14px; 
-    font-weight: 400; 
     word-wrap: break-word;
     padding: 11px;
     display: flex;
@@ -226,15 +177,13 @@ body {
     width: 39px;
 }
 
-.comment > input {
+.comment__input {
     color: #8899A8; 
-    font-size: 14px; 
-    font-weight: 400; 
     font-family: "Comfortaa", sans-serif;
+    font-size: 14px;
 }
 
 .comment__btn {
-    width: 120px; 
     height: 39px;
     padding: 14px 33px;
     color: #5051F9; 
@@ -244,35 +193,37 @@ body {
     background: #EDECFE; 
     border-radius: 9px;
     margin-right: 5px;
+    font-family: "Comfortaa", sans-serif;
+    cursor: pointer;
 }
 
 
 
 /* стили для всплывающего окна */
 
-.modal-wrapper {
-    position: fixed;
-    display: flex;
+.modal-bacdrop { 
     width: 100%;
     height: 100%;
-    justify-content: center;
-    align-items: center;
     background: #0000004f;
-    z-index: 100;
-    visibility: hidden;
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
 }
 
-.modal-bacdrop {
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    position: fixed;
     width: 425px; 
     height: 340px; 
     background: #ffffff; 
     box-shadow: 0px 8px 14px 12px rgba(56.31, 56.31, 56.31, 0.05); 
     border-radius: 10px;
-    position: absolute;
+    position: relative;
     top: 25%;
     left: 38%;
-    z-index:2;
-    visibility: hidden;
 }
 
 .modal__delite {
@@ -281,30 +232,19 @@ body {
     right: 10px;
     font-size: 24px;
     cursor: pointer;
-    color: #5051F9;
     width: 24px; 
-    height: 24px; 
-}
-
-.modal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    position: relative;
+    background-color: transparent;
 }
 
 .modal__title {
     text-align: center; 
     color: #000000; 
     font-size: 24px; 
-    font-weight: 400; 
     word-wrap: break-word;
     margin-top: 24px;
 }
 .modal__icon {
     color: #768396; 
-    font-size: 14px;
     font-weight: 500; 
     word-wrap: break-word;
 }
@@ -326,29 +266,23 @@ body {
     background-position: center;
 }
 
-.modal__progress-step:hover {
-    background-color: #5051f9;
-}
-
-.modal__label {
+.modal__form {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
-.modal__input {
-    width: 379px; 
+.modal__form__input {
+    min-width: 379px; 
     height: 39px; 
     background: #ffffff; 
     border-radius: 9px; 
     border: 1px #E7EBFB solid;
     padding: 11px 20px;
     color: #8899A8; 
-    font-size: 14px; 
-    font-weight: 400; 
     word-wrap: break-word;
-    font-family: "Comfortaa", sans-serif;
 }
+
 .modal__add {
     width: 120px; 
     height: 39px; 
@@ -363,12 +297,6 @@ body {
     text-align: center;
     padding: 11px;
 }
-
-/* включить modal-activ чтобы увидеть модальное окно */
-
-/* .modal-activ {
-    visibility: visible;
-} */
 
 
 
