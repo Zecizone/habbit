@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-    var dialog = document.querySelector('dialog')
+    const dialog = document.querySelector('dialog')
     // выводим окно
     document.querySelector('#navBtn4').onclick = function () {
       dialog.showModal()
@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
       dialog.close() 
     }
 
-// продожи тут
 
 });
 
