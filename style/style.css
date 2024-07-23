@@ -125,7 +125,7 @@ body {
     background-color: var(--color-progress-line);
 }
 
-.progress__line--percentage {
+.progress__line-percentage {
     border-radius: 4px;
     width: 171px;
     height: 5px;
@@ -150,7 +150,7 @@ body {
     color: var(--color-text);  
     font-weight: 500; 
     word-wrap: break-word;
-    width: 130px;
+    min-width: 130px;
     text-align: center;
     border-right: 1px var(--border) solid;
     border-radius: 10px 0 0 10px;  
@@ -162,46 +162,79 @@ body {
     color: var(--color-text-purpur); 
     font-size: 16px; 
     font-weight: 500; 
-    display: flex;
+    display: inline-block;
     flex: auto;
     margin-left: 20px;
+    width: 100%;
 }
 
 .report__del-button {
-    background-image: url(/img/delete.svg);
     background-size: auto;
     background-repeat: no-repeat;
     width: 24px;
     height: 24px;
     flex: initial;
-    background-color: unset;
+    background-color: initial;
     cursor: pointer;
-    margin-right: 5px;
+    margin: 15px;
 }
 
 .comment {
     background: var(--color-white); 
-    border-radius: 9px; 
-    border: 1px var(--border) solid;
-    margin: 5px;
-    color: var(--color-light-text); 
-    word-wrap: break-word;
-    padding: 11px;
+    color: var(--color-text-purpur); 
     display: flex;
-    gap: 10px;
     align-items: center;
-    flex: auto;
-    margin-left: 20px;
-    width: 39px;
-}
+    height: 53px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+  }
 
-.comment__input {
+  .comment__day {
+    display: block;
+    background-color: var(--color-panel);
+    color: var(--color-text);  
+    font-weight: 500; 
+    word-wrap: break-word;
+    min-width: 130px;
+    text-align: center;
+    border-right: 1px var(--border) solid;
+    border-radius: 10px 0 0 10px;  
+    flex: inherit;
+    line-height: 53px;
+  }
+
+  .comment__label {
+    position: relative;
+    margin: 5px 5px 5px 20px;
+    width: 100%;
+  }
+
+  .comment__comment-img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    margin-left: 20px;
+  }
+
+  .comment__comment-input {
+    width: 100%;
+    padding: 13px 5px 9px 45px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    font-weight: 500; 
+  }
+
+  .comment__comment-input::placeholder {
     color: var(--color-light-text); 
     font-family: "Comfortaa", sans-serif;
     font-size: 14px;
-}
+  }
 
-.comment__btn {
+  .comment__btn {
+    display: block;
+    border: none;
     height: 39px;
     padding: 14px 33px;
     color: var(--color-primary); 
@@ -213,9 +246,13 @@ body {
     margin-right: 5px;
     font-family: "Comfortaa", sans-serif;
     cursor: pointer;
-}
+  }
 
+  .comment__btn:hover {
+    opacity: 0.8;
+  }
 
+  
 
 /* стили для всплывающего окна */
 

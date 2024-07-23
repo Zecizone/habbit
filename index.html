@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <title>Habbit - трекер привычек</title>
-    <script src="index.js"></script>
+    <script defer src="index.js"></script>
   </head>
   <body>
     <div class="panel">
@@ -38,7 +38,7 @@
                     <p class="progress__percentage">80%</p>
                   </div>
                   <div class="progress__line">
-                      <div class="progress__line--percentage"></div>
+                      <div class="progress__line-percentage"></div>
                   </div>
               </div>
           </header>
@@ -47,20 +47,22 @@
               <li class="main__item report">
                 <span class="report__day">День 1</span>
                 <span class="report__text">Первый подход всегда даётся тяжело</span>
-                <button class="report__del-button"></button>
+                <button class="report__del-button">
+                  <img src="img/delete.svg" alt="Корзина" />
+                </button>
               </li>
             </ul>
-            <div class="main__item report">
-                <div class="report__day">
-                    День 2
-                </div>
-                <div class="report__comment comment">
-                    <img class="comment__img" src="img/komm.svg" alt="">
-                    <input class="comment__input" type="text" placeholder="Комментарий">   
-                </div>
-                <button class="comment__btn" type="submit">Готово</button>
+            <form action="" class="comment">
+              <label class="comment__day">День 2</label>
+              <div  class="comment__label">
+                <label>
+                  <img class="comment__comment-img" src="img/komm.svg" alt="Комментарий">
+                  <input class="comment__comment-input" type="text" placeholder="Комментарий">
+                </label>
               </div>
-            </main>
+              <button class="comment__btn" type="submit">Готово</button>
+            </form>
+          </main>
           </div>
         </div>
         <dialog class="modal-bacdrop">
