@@ -94,8 +94,18 @@ body {
     background-position: center;
 }
 
+.nav__btn--activ {
+    background: #5051f9;
+}
+
 .btn-add {
     border: 1px solid var(--border-btn);
+    background-image:  url(../img/Add.svg);
+}
+
+.btn-add--activ {
+    background: #5051f9;
+    background-image: url(../img/add-white.svg);
 }
 
 .header {
@@ -127,7 +137,7 @@ body {
 
 .progress__line-percentage {
     border-radius: 4px;
-    width: 171px;
+    width: 80%;
     height: 5px;
     background-color: var(--color-primary);
 }
@@ -322,6 +332,10 @@ body {
     background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.modal__progress-activ {
+    background: #5051f9;
 }
 
 .modal__form {
