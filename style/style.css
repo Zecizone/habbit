@@ -94,8 +94,18 @@ body {
     background-position: center;
 }
 
+.nav__btn--activ {
+    background: #5051f9;
+}
+
 .btn-add {
     border: 1px solid var(--border-btn);
+    background-image:  url(../img/Add.svg);
+}
+
+.btn-add--activ {
+    background: #5051f9;
+    background-image: url(../img/add-white.svg);
 }
 
 .header {
@@ -127,7 +137,7 @@ body {
 
 .progress__line-percentage {
     border-radius: 4px;
-    width: 171px;
+    width: 80%;
     height: 5px;
     background-color: var(--color-primary);
 }
@@ -305,12 +315,17 @@ body {
     color: var(--color-light-grey); 
     font-weight: 500; 
     word-wrap: break-word;
+    text-align: center;
 }
 .modal__progress {
     display: flex;
     gap: 25px;
+    justify-content: center;
+    margin: 9px 18px;
 }
-.modal__progress-step {
+
+
+.modal__progress_button {
     width: 45px; 
     height: 45px; 
     border-radius: 14px; 
@@ -323,6 +338,20 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
 
 .modal__form {
     display: flex;
@@ -339,6 +368,12 @@ body {
     padding: 11px 20px;
     color: var(--color-light-text); 
     word-wrap: break-word;
+    font-family: "Comfortaa", sans-serif;
+}
+
+.modal__form__button {
+    text-align: center;
+    margin-top: 17px;
 }
 
 .modal__add {
@@ -355,8 +390,3 @@ body {
     text-align: center;
     padding: 11px;
 }
-
-
-
-  
-

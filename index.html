@@ -14,50 +14,19 @@
   <body>
     <div class="panel">
       <img src="img/logo.svg" alt="" class="header__logo">
-      <nav class="nav">
-        <button id="navBtn1" class="nav__btn">
-          <img id="btnDumbbel" src="" alt="Гантеля" />
-        </button>
-        <button id="navBtn2" class="nav__btn">
-          <img id="btnWater" src="" alt="Вода" />
-        </button>
-        <button id="navBtn3" class="nav__btn">
-          <img id="btnEat" src="" alt="Еда" />
-        </button>
-        <button id="navBtn4" class="nav__btn btn-add">
-          <img id="btnAdd" src="" alt="Добавить" />
-        </button>
-      </nav>
+      <nav class="nav"></nav>
+      <button id="open" class="nav__btn btn-add" onclick="dialogHendler()"></button>     
     </div>
       <div class="container">
-          <header class="header">
-              <h1 class="header__title">Отжимания</h1>
-              <div class="progress">
-                  <div class="progress__title">
-                    <p class="progress__text">Прогресс</p>
-                    <p class="progress__percentage">80%</p>
-                  </div>
-                  <div class="progress__line">
-                      <div class="progress__line-percentage"></div>
-                  </div>
-              </div>
-          </header>
+          <header class="header"></header>
           <main class="main">
-            <ul class="main__list">
-              <li class="main__item report">
-                <span class="report__day">День 1</span>
-                <span class="report__text">Первый подход всегда даётся тяжело</span>
-                <button class="report__del-button">
-                  <img src="img/delete.svg" alt="Корзина" />
-                </button>
-              </li>
-            </ul>
-            <form action="" class="comment">
-              <label class="comment__day">День 2</label>
+            <ul class="main__list"></ul>
+            <form action="" class="comment" onsubmit="addDay(event)">
+              <label class="comment__day">День 1</label>
               <div  class="comment__label">
                 <label>
                   <img class="comment__comment-img" src="img/komm.svg" alt="Комментарий">
-                  <input class="comment__comment-input" value="" type="text" placeholder="Комментарий">
+                  <input class="comment__comment-input" value="" type="text" placeholder="Комментарий" name="comment">
                 </label>
               </div>
               <button class="comment__btn" type="submit">Готово</button>
@@ -65,29 +34,31 @@
           </main>
           </div>
         </div>
-        <dialog class="modal-bacdrop">
+        <dialog class="modal-bacdrop"> 
           <div class="modal">
-            <button id="close" class="modal__delite">
-              <img src="img/shape.svg" alt="delite" />
+            <button id="close" class="modal__delite" onclick="dialogHendler()">
+              <img src="img/shape.svg" alt="delite"/>
             </button>
-            <div class="modal__title">Новая привычка</div>
-            <div class="modal__icon">Иконка</div>
-            <div class="modal__progress"> 
-              <button id="navBtn5" class="modal__progress-step">
-                <img id="Dumbbel" src="" alt="Гантеля" />
-              </button>
-              <button id="navBtn6" class="modal__progress-step">
-                <img id="Water" src="" alt="Вода" />
-              </button>
-              <button id="navBtn7" class="modal__progress-step">
-                <img id="Eat" src="" alt="Еда" />
-              </button>
-            </div>
-              <form class="modal__form">
-                <input class="modal__form__input" type="text" placeholder="Название">
-                <input class="modal__form__input" type="number" placeholder="Цель">
-              </form>
-            <button class="modal__add">Добавить</button>
+            <form class="modal__form" onsubmit="addHabit(event)">
+              <div class="modal__title">Новая привычка</div>
+              <div class="modal__icon">Иконка</div>
+              <div class="modal__progress"> 
+                <label class="modal__progress_button" style="background-image: url('./img/dumbbell.svg');" onclick="activRadio(event)" data-icon="dumbbell">
+                  <input type="radio" name="icon" value="dumbbell" class="image-radio visually-hidden" required>
+                </label>
+                <label class="modal__progress_button" style="background-image: url('./img/water.svg');" onclick="activRadio(event)" data-icon="water">
+                  <input type="radio" name="icon" value="water" class="image-radio visually-hidden" required>
+                </label>
+                <label class="modal__progress_button" style="background-image: url('./img/eat.svg');" onclick="activRadio(event)" data-icon="eat">
+                  <input type="radio" name="icon" value="eat" class="image-radio visually-hidden" required>
+                </label>            
+              </div>
+                  <input class="modal__form__input" type="text" placeholder="Название" name="name" required autofocus>
+                  <input class="modal__form__input" type="number" placeholder="Цель" name="target" required>
+                  <div class="modal__form__button">
+                  <button class="modal__add">Добавить</button>
+                </div>
+            </form>
           </div>
         </dialog>
   </body>
